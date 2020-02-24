@@ -45,7 +45,7 @@ strassen: getoptions.o strassen.o
 loop-matmul: loop-matmul.o
 qsort: qsort.o
 
-cholesky : LDLIBS += -lm
+reducer_add cholesky : LDLIBS += -lm
 
 % : %.o
 	$(CXX) ${CXXFLAGS} $^ $(LDLIBS) -o $@ $(LDFLAGS) 
