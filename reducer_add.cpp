@@ -12,7 +12,7 @@
 int main(){
   cilk::reducer_opadd<float> sum;
   //defining the sum as a reducer with an int value
-  cilk_for (int i = 0; i <= 10E6; i++)
+  cilk_for (int i = 0; i <= 10^6; i++)
     sum += 3^i;
   printf("%f\n",sum.get_value()); //notice that sum is now an object
 }
