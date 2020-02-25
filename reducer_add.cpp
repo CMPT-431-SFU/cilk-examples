@@ -10,9 +10,11 @@
 
 
 int main(){
-  cilk::reducer_opadd<float> sum;
+  cilk::reducer< cilk::op_add<int> > parallel_sum(0);
   //defining the sum as a reducer with an int value
- cilk_for(int i = 0; i <= 100000; i++)
-    sum += 3^i;
-  printf("%f\n",sum.get_value()); //notice that sum is now an object
+ cilk_for(int i = 1; i <= 10000; i++)
+   {
+    *parallel_sum += i;
+   }
+ printf("%d\n",parallel_sum.get_value()); //notice that sum is now an object
 }
