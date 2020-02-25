@@ -1,4 +1,4 @@
-ALL_TESTS = reducer_max reducer_add cholesky nqueens qsort rectmul strassen
+ALL_TESTS = fib fibred fib_seq fib_threads reducer_max reducer_add cholesky nqueens qsort rectmul strassen
 
 CC = gcc
 CXX = g++
